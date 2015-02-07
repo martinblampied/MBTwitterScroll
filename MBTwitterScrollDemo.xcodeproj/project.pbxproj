@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC08538B1A86B96C000766A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC08538A1A86B96C000766A4 /* main.m */; };
+		BC08538E1A86B96C000766A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC08538D1A86B96C000766A4 /* AppDelegate.m */; };
+		BC0853911A86B96C000766A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0853901A86B96C000766A4 /* ViewController.m */; };
+		BC0853961A86B96C000766A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0853951A86B96C000766A4 /* Images.xcassets */; };
+		BC0853991A86B96C000766A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0853971A86B96C000766A4 /* LaunchScreen.xib */; };
+		BC0853A51A86B96C000766A4 /* MBTwitterScrollDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0853A41A86B96C000766A4 /* MBTwitterScrollDemoTests.m */; };
+		BC873FB51A86BB18008D23A5 /* MBTwitterScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = BC873FB11A86BB18008D23A5 /* MBTwitterScroll.m */; };
+		BC873FB61A86BB18008D23A5 /* UIScrollView+TwitterCover.m in Sources */ = {isa = PBXBuildFile; fileRef = BC873FB41A86BB18008D23A5 /* UIScrollView+TwitterCover.m */; };
+		BC873FB81A86BB8A008D23A5 /* martin.png in Resources */ = {isa = PBXBuildFile; fileRef = BC873FB71A86BB8A008D23A5 /* martin.png */; };
+		BC873FBB1A86BB99008D23A5 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC873FBA1A86BB99008D23A5 /* PopoverViewController.m */; };
+		BC873FBD1A86BBAD008D23A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC873FBC1A86BBAD008D23A5 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC08539F1A86B96C000766A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC08537D1A86B96C000766A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC0853841A86B96C000766A4;
+			remoteInfo = MBTwitterScrollDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC0853851A86B96C000766A4 /* MBTwitterScrollDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTwitterScrollDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0853891A86B96C000766A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC08538A1A86B96C000766A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC08538C1A86B96C000766A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC08538D1A86B96C000766A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC08538F1A86B96C000766A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC0853901A86B96C000766A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC0853951A86B96C000766A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BC0853981A86B96C000766A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BC08539E1A86B96C000766A4 /* MBTwitterScrollDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBTwitterScrollDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0853A31A86B96C000766A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC0853A41A86B96C000766A4 /* MBTwitterScrollDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTwitterScrollDemoTests.m; sourceTree = "<group>"; };
+		BC873FB01A86BB18008D23A5 /* MBTwitterScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTwitterScroll.h; sourceTree = "<group>"; };
+		BC873FB11A86BB18008D23A5 /* MBTwitterScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTwitterScroll.m; sourceTree = "<group>"; };
+		BC873FB31A86BB18008D23A5 /* UIScrollView+TwitterCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TwitterCover.h"; sourceTree = "<group>"; };
+		BC873FB41A86BB18008D23A5 /* UIScrollView+TwitterCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TwitterCover.m"; sourceTree = "<group>"; };
+		BC873FB71A86BB8A008D23A5 /* martin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = martin.png; sourceTree = "<group>"; };
+		BC873FB91A86BB99008D23A5 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		BC873FBA1A86BB99008D23A5 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		BC873FBC1A86BBAD008D23A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC0853821A86B96C000766A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC08539B1A86B96C000766A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC08537C1A86B96C000766A4 = {
+			isa = PBXGroup;
+			children = (
+				BC0853871A86B96C000766A4 /* MBTwitterScrollDemo */,
+				BC0853A11A86B96C000766A4 /* MBTwitterScrollDemoTests */,
+				BC0853861A86B96C000766A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC0853861A86B96C000766A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC0853851A86B96C000766A4 /* MBTwitterScrollDemo.app */,
+				BC08539E1A86B96C000766A4 /* MBTwitterScrollDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC0853871A86B96C000766A4 /* MBTwitterScrollDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BC873FAF1A86BB18008D23A5 /* MBTwitterScroll */,
+				BC08538C1A86B96C000766A4 /* AppDelegate.h */,
+				BC08538D1A86B96C000766A4 /* AppDelegate.m */,
+				BC08538F1A86B96C000766A4 /* ViewController.h */,
+				BC0853901A86B96C000766A4 /* ViewController.m */,
+				BC873FB91A86BB99008D23A5 /* PopoverViewController.h */,
+				BC873FBA1A86BB99008D23A5 /* PopoverViewController.m */,
+				BC873FBC1A86BBAD008D23A5 /* Main.storyboard */,
+				BC0853951A86B96C000766A4 /* Images.xcassets */,
+				BC0853881A86B96C000766A4 /* Supporting Files */,
+			);
+			path = MBTwitterScrollDemo;
+			sourceTree = "<group>";
+		};
+		BC0853881A86B96C000766A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC873FB71A86BB8A008D23A5 /* martin.png */,
+				BC0853971A86B96C000766A4 /* LaunchScreen.xib */,
+				BC0853891A86B96C000766A4 /* Info.plist */,
+				BC08538A1A86B96C000766A4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC0853A11A86B96C000766A4 /* MBTwitterScrollDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC0853A41A86B96C000766A4 /* MBTwitterScrollDemoTests.m */,
+				BC0853A21A86B96C000766A4 /* Supporting Files */,
+			);
+			path = MBTwitterScrollDemoTests;
+			sourceTree = "<group>";
+		};
+		BC0853A21A86B96C000766A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC0853A31A86B96C000766A4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC873FAF1A86BB18008D23A5 /* MBTwitterScroll */ = {
+			isa = PBXGroup;
+			children = (
+				BC873FB01A86BB18008D23A5 /* MBTwitterScroll.h */,
+				BC873FB11A86BB18008D23A5 /* MBTwitterScroll.m */,
+				BC873FB21A86BB18008D23A5 /* TwitterCover */,
+			);
+			path = MBTwitterScroll;
+			sourceTree = "<group>";
+		};
+		BC873FB21A86BB18008D23A5 /* TwitterCover */ = {
+			isa = PBXGroup;
+			children = (
+				BC873FB31A86BB18008D23A5 /* UIScrollView+TwitterCover.h */,
+				BC873FB41A86BB18008D23A5 /* UIScrollView+TwitterCover.m */,
+			);
+			path = TwitterCover;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC0853841A86B96C000766A4 /* MBTwitterScrollDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0853A81A86B96C000766A4 /* Build configuration list for PBXNativeTarget "MBTwitterScrollDemo" */;
+			buildPhases = (
+				BC0853811A86B96C000766A4 /* Sources */,
+				BC0853821A86B96C000766A4 /* Frameworks */,
+				BC0853831A86B96C000766A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBTwitterScrollDemo;
+			productName = MBTwitterScrollDemo;
+			productReference = BC0853851A86B96C000766A4 /* MBTwitterScrollDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC08539D1A86B96C000766A4 /* MBTwitterScrollDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0853AB1A86B96C000766A4 /* Build configuration list for PBXNativeTarget "MBTwitterScrollDemoTests" */;
+			buildPhases = (
+				BC08539A1A86B96C000766A4 /* Sources */,
+				BC08539B1A86B96C000766A4 /* Frameworks */,
+				BC08539C1A86B96C000766A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC0853A01A86B96C000766A4 /* PBXTargetDependency */,
+			);
+			name = MBTwitterScrollDemoTests;
+			productName = MBTwitterScrollDemoTests;
+			productReference = BC08539E1A86B96C000766A4 /* MBTwitterScrollDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC08537D1A86B96C000766A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = MartinBlampied;
+				TargetAttributes = {
+					BC0853841A86B96C000766A4 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					BC08539D1A86B96C000766A4 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = BC0853841A86B96C000766A4;
+					};
+				};
+			};
+			buildConfigurationList = BC0853801A86B96C000766A4 /* Build configuration list for PBXProject "MBTwitterScrollDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC08537C1A86B96C000766A4;
+			productRefGroup = BC0853861A86B96C000766A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC0853841A86B96C000766A4 /* MBTwitterScrollDemo */,
+				BC08539D1A86B96C000766A4 /* MBTwitterScrollDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC0853831A86B96C000766A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC873FB81A86BB8A008D23A5 /* martin.png in Resources */,
+				BC0853991A86B96C000766A4 /* LaunchScreen.xib in Resources */,
+				BC0853961A86B96C000766A4 /* Images.xcassets in Resources */,
+				BC873FBD1A86BBAD008D23A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC08539C1A86B96C000766A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC0853811A86B96C000766A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC873FBB1A86BB99008D23A5 /* PopoverViewController.m in Sources */,
+				BC0853911A86B96C000766A4 /* ViewController.m in Sources */,
+				BC873FB51A86BB18008D23A5 /* MBTwitterScroll.m in Sources */,
+				BC08538E1A86B96C000766A4 /* AppDelegate.m in Sources */,
+				BC08538B1A86B96C000766A4 /* main.m in Sources */,
+				BC873FB61A86BB18008D23A5 /* UIScrollView+TwitterCover.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC08539A1A86B96C000766A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0853A51A86B96C000766A4 /* MBTwitterScrollDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC0853A01A86B96C000766A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC0853841A86B96C000766A4 /* MBTwitterScrollDemo */;
+			targetProxy = BC08539F1A86B96C000766A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC0853971A86B96C000766A4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0853981A86B96C000766A4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC0853A61A86B96C000766A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC0853A71A86B96C000766A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC0853A91A86B96C000766A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MBTwitterScrollDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC0853AA1A86B96C000766A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MBTwitterScrollDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC0853AC1A86B96C000766A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MBTwitterScrollDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBTwitterScrollDemo.app/MBTwitterScrollDemo";
+			};
+			name = Debug;
+		};
+		BC0853AD1A86B96C000766A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MBTwitterScrollDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBTwitterScrollDemo.app/MBTwitterScrollDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC0853801A86B96C000766A4 /* Build configuration list for PBXProject "MBTwitterScrollDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0853A61A86B96C000766A4 /* Debug */,
+				BC0853A71A86B96C000766A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0853A81A86B96C000766A4 /* Build configuration list for PBXNativeTarget "MBTwitterScrollDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0853A91A86B96C000766A4 /* Debug */,
+				BC0853AA1A86B96C000766A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0853AB1A86B96C000766A4 /* Build configuration list for PBXNativeTarget "MBTwitterScrollDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0853AC1A86B96C000766A4 /* Debug */,
+				BC0853AD1A86B96C000766A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC08537D1A86B96C000766A4 /* Project object */;
+}

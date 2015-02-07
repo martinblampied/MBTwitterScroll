@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pVi-mK-MMp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jUl-Wt-QG0">
+            <objects>
+                <viewController id="pVi-mK-MMp" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JQf-Op-OBX"/>
+                        <viewControllerLayoutGuide type="bottom" id="igZ-Pv-cAF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="liJ-HS-aQf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj7-aj-LJF">
+                                <rect key="frame" x="554" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BS2-GX-rLX"/>
+                                    <constraint firstAttribute="width" constant="30" id="CLf-xa-587"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="searchIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nj7-aj-LJF" firstAttribute="trailing" secondItem="liJ-HS-aQf" secondAttribute="trailingMargin" id="BGx-tN-YEL"/>
+                            <constraint firstItem="nj7-aj-LJF" firstAttribute="top" secondItem="JQf-Op-OBX" secondAttribute="bottom" constant="8" symbolic="YES" id="nkU-sX-UaI"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
+                    <connections>
+                        <outlet property="searchButton" destination="nj7-aj-LJF" id="XO5-SO-xQl"/>
+                        <segue destination="GoF-x3-xel" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="liJ-HS-aQf" id="fh3-Nq-Lzp">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dt-Hg-3uR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="183"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="nfq-Tz-dal">
+            <objects>
+                <viewController id="GoF-x3-xel" customClass="PopoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zl7-yk-J90"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9m-z0-VCq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n87-KJ-WQb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HO-4s-Kon">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Q1j-nb-zy3"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Popover" id="PVz-OI-2Bv">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="JFg-0f-3Kj">
+                                            <connections>
+                                                <action selector="doneBtnClicked:" destination="GoF-x3-xel" id="0hW-d2-WWk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag down event recieved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnr-H9-m3L">
+                                <rect key="frame" x="16" y="104" width="568" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="oGG-wC-xZt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need something? Contact dev" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buK-nW-Ej6">
+                                <rect key="frame" x="16" y="228" width="568" height="95"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hZ-4YU">
+                                <rect key="frame" x="266" y="302" width="69" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="BFc-wn-CF5"/>
+                                    <constraint firstAttribute="width" constant="69" id="tKd-aE-obu"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="martin.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="meClicked:" destination="GoF-x3-xel" eventType="touchUpInside" id="fHw-w5-fMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qnr-H9-m3L" firstAttribute="centerX" secondItem="8HO-4s-Kon" secondAttribute="centerX" id="1pW-IY-KWz"/>
+                            <constraint firstItem="buK-nW-Ej6" firstAttribute="leading" secondItem="Qnr-H9-m3L" secondAttribute="leading" id="1rt-px-Us1"/>
+                            <constraint firstItem="Qnr-H9-m3L" firstAttribute="leading" secondItem="n87-KJ-WQb" secondAttribute="leadingMargin" id="38D-0S-GSh"/>
+                            <constraint firstItem="8HO-4s-Kon" firstAttribute="top" secondItem="zl7-yk-J90" secondAttribute="bottom" id="8Ty-Wk-8gt"/>
+                            <constraint firstItem="buK-nW-Ej6" firstAttribute="trailing" secondItem="Qnr-H9-m3L" secondAttribute="trailing" id="A88-GQ-1V7"/>
+                            <constraint firstItem="X9m-z0-VCq" firstAttribute="top" secondItem="buK-nW-Ej6" secondAttribute="bottom" constant="277" id="FUn-tB-sOS"/>
+                            <constraint firstItem="X9m-z0-VCq" firstAttribute="top" secondItem="plg-hZ-4YU" secondAttribute="bottom" constant="229" id="Hfc-Am-KCE"/>
+                            <constraint firstItem="8HO-4s-Kon" firstAttribute="leading" secondItem="n87-KJ-WQb" secondAttribute="leading" id="S8s-nb-b5a"/>
+                            <constraint firstItem="Qnr-H9-m3L" firstAttribute="top" secondItem="8HO-4s-Kon" secondAttribute="bottom" constant="40" id="gBQ-ej-4Oi"/>
+                            <constraint firstItem="buK-nW-Ej6" firstAttribute="top" secondItem="Qnr-H9-m3L" secondAttribute="bottom" constant="78" id="uXO-Xf-0gk"/>
+                            <constraint firstItem="buK-nW-Ej6" firstAttribute="centerX" secondItem="plg-hZ-4YU" secondAttribute="centerX" id="yEB-e3-F1j"/>
+                            <constraint firstAttribute="trailing" secondItem="8HO-4s-Kon" secondAttribute="trailing" id="zvU-2v-it5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="meButton" destination="plg-hZ-4YU" id="Vmi-B3-wAK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nul-kR-K2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="martin.png" width="100" height="104"/>
+        <image name="searchIcon" width="416" height="416"/>
+    </resources>
+</document>
