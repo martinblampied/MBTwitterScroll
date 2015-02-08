@@ -43,7 +43,7 @@ To show animation on UITableVIew use the following code:
 
 ## UIScrollView
 
-To show animation on UITableVIew use the following code:
+To show animation on UIScrollView use the following code:
 
 ```objective-c
    MBTwitterScroll *myScrollView = [[MBTwitterScroll alloc]
