@@ -14,7 +14,7 @@ Recreate Twitter's profile page scrolling animation for UITableView and UIScroll
 MBTwitterScroll is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod "TSMessages"
+    pod "MBTwitterScroll"
 
 ## Manually
 Copy the source files MBTwitterScroll folder into your project.
