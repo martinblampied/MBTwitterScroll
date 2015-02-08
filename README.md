@@ -4,15 +4,17 @@ Recreate Twitter's profile page scrolling animation for UITableView and UIScroll
 
 ![alt tag](http://i.imgur.com/iz7BIxt.gif?1)
 
-
-[![Twitter: @MartinBlampied](https://img.shields.io/badge/contact-@Martinblampied-blue.svg?style=flat)](https://twitter.com/martinblampied)
-[![License](https://img.shields.io/cocoapods/l/TSMessages.svg?style=flat)]()
-[![Platform](https://img.shields.io/cocoapods/p/TSMessages.svg?style=flat)]()
-
+[![Twitter: @martinblampied](https://img.shields.io/badge/contact-@martinblampied-blue.svg?style=flat)](https://twitter.com/martinblampied)
+[![Version](https://img.shields.io/cocoapods/v/MBTwitterScroll.svg?style=flat)](http://cocoadocs.org/docsets/MBTwitterScroll)
+[![License](https://img.shields.io/cocoapods/l/MBTwitterScroll.svg?style=flat)](http://cocoadocs.org/docsets/MBTwitterScroll)
+[![Platform](https://img.shields.io/cocoapods/p/MBTwitterScroll.svg?style=flat)](http://cocoadocs.org/docsets/MBTwitterScroll)
 
 # Installation
 ## From CocoaPods
-Comming soon.
+MBTwitterScroll is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+    pod "TSMessages"
 
 ## Manually
 Copy the source files MBTwitterScroll folder into your project.
