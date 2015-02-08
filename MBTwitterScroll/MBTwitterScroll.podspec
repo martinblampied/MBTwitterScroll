@@ -21,8 +21,7 @@ Pod::Spec.new do |s|
 :git => "https://github.com/starchand/MBTwitterScroll.git",
 :tag => "0.1" }
   s.source_files  = "*.{h,m}"
-  s.source_files = "TwitterCover"
-  s.source_files = "TwitterCover/*.{h,m}"
+  s.source_files = "/TwitterCover/*.{h,m}"
   s.requires_arc = true
 
 
