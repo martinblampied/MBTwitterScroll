@@ -92,16 +92,15 @@ CGFloat const distance_W_LabelHeader = 35.0;
     subtitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
     subtitleLabel.textColor = [UIColor lightGrayColor];
     
-    UIButton * headerButton;
     if (buttonTitle.length > 0) {
-        headerButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - 100, 120, 80, 35)];
-        [headerButton setTitle:buttonTitle forState:UIControlStateNormal];
-        [headerButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-        headerButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
-        headerButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        headerButton.layer.borderWidth = 1;
-        headerButton.layer.cornerRadius = 8;
-        [headerButton addTarget:self action:@selector(recievedMBTwitterScrollButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+        self.headerButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - 100, 120, 80, 35)];
+        [self.headerButton setTitle:buttonTitle forState:UIControlStateNormal];
+        [self.headerButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        self.headerButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
+        self.headerButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        self.headerButton.layer.borderWidth = 1;
+        self.headerButton.layer.cornerRadius = 8;
+        [self.headerButton addTarget:self action:@selector(recievedMBTwitterScrollButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (type == MBTable) {
@@ -109,14 +108,14 @@ CGFloat const distance_W_LabelHeader = 35.0;
         [self.tableView addSubview:titleLabel];
         [self.tableView addSubview:subtitleLabel];
         if (buttonTitle.length > 0) {
-            [self.tableView addSubview:headerButton];
+            [self.tableView addSubview:self.headerButton];
         }
     } else {
         [self.scrollView addSubview:self.avatarImage];
         [self.scrollView addSubview:titleLabel];
         [self.scrollView addSubview:subtitleLabel];
         if (buttonTitle.length > 0) {
-            [self.scrollView addSubview:headerButton];
+            [self.scrollView addSubview:self.headerButton];
         }
     }
     

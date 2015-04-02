@@ -32,7 +32,6 @@
     myTableView.delegate = self;
     [self.view addSubview:myTableView];
     
-    
     /*
      MBTwitterScroll *myScrollView = [[MBTwitterScroll alloc]
      initScrollViewWithBackgound:nil
