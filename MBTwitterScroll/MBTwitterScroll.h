@@ -27,7 +27,7 @@ typedef enum : NSUInteger {
 
 - (MBTwitterScroll *)initTableViewWithBackgound:(UIImage*)backgroundImage avatarImage:(UIImage *)avatarImage titleString:(NSString *)titleString subtitleString:(NSString *)subtitleString buttonTitle:(NSString *)buttonTitle;
 - (MBTwitterScroll *)initScrollViewWithBackgound:(UIImage*)backgroundImage avatarImage:(UIImage *)avatarImage titleString:(NSString *)titleString subtitleString:(NSString *)subtitleString buttonTitle:(NSString *)buttonTitle contentHeight:(CGFloat)height;
-
+-(void)updateHeaderImage:(UIImage*)newImage;
 
 @property (strong, nonatomic) UIImageView *avatarImage;
 @property (strong, nonatomic) UIView *header;
@@ -36,6 +36,8 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UIImageView *headerImageView;
 @property (strong, nonatomic) UIButton *headerButton;
+@property (strong, nonatomic) UILabel *subtitleLabel;
+@property (strong, nonatomic) UILabel *titleLabel;
 
 @property (nonatomic, strong) NSMutableArray *blurImages;
 @property (nonatomic,strong) id<MBTwitterScrollDelegate>delegate;

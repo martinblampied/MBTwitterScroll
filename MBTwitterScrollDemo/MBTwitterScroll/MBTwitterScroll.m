@@ -22,7 +22,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
     CGRect bounds = [[UIScreen mainScreen] bounds];
     self = [[MBTwitterScroll alloc] initWithFrame:bounds];
     [self setupView:backgroundImage avatarImage:avatarImage titleString:titleString subtitleString:subtitleString buttonTitle:buttonTitle scrollHeight:height type:MBScroll];
-        
+    
     return self;
 }
 
@@ -75,7 +75,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
         self.scrollView.contentSize = newSize;
         self.scrollView.delegate = self;
     }
-  
+    
     
     self.avatarImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 79, 69, 69)];
     self.avatarImage.image = avatarImage;
@@ -84,38 +84,39 @@ CGFloat const distance_W_LabelHeader = 35.0;
     self.avatarImage.layer.borderColor = [UIColor whiteColor].CGColor;
     self.avatarImage.clipsToBounds = YES;
     
-    UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 156, 250, 25)];
-    titleLabel.text = titleString;
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 156, 250, 25)];
+    self.titleLabel.text = titleString;
     
-    UILabel * subtitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 177, 250, 25)];
-    subtitleLabel.text = subtitleString;
-    subtitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
-    subtitleLabel.textColor = [UIColor lightGrayColor];
+    self.subtitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 177, 250, 25)];
+    self.subtitleLabel.text = subtitleString;
+    self.subtitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
+    self.subtitleLabel.textColor = [UIColor lightGrayColor];
     
+    UIButton * headerButton;
     if (buttonTitle.length > 0) {
-        self.headerButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - 100, 120, 80, 35)];
-        [self.headerButton setTitle:buttonTitle forState:UIControlStateNormal];
-        [self.headerButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-        self.headerButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
-        self.headerButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        self.headerButton.layer.borderWidth = 1;
-        self.headerButton.layer.cornerRadius = 8;
-        [self.headerButton addTarget:self action:@selector(recievedMBTwitterScrollButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+        headerButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - 100, 120, 80, 35)];
+        [headerButton setTitle:buttonTitle forState:UIControlStateNormal];
+        [headerButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        headerButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
+        headerButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        headerButton.layer.borderWidth = 1;
+        headerButton.layer.cornerRadius = 8;
+        [headerButton addTarget:self action:@selector(recievedMBTwitterScrollButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (type == MBTable) {
         [self.tableView addSubview:self.avatarImage];
-        [self.tableView addSubview:titleLabel];
-        [self.tableView addSubview:subtitleLabel];
+        [self.tableView addSubview:self.titleLabel];
+        [self.tableView addSubview:self.subtitleLabel];
         if (buttonTitle.length > 0) {
-            [self.tableView addSubview:self.headerButton];
+            [self.tableView addSubview:headerButton];
         }
     } else {
         [self.scrollView addSubview:self.avatarImage];
-        [self.scrollView addSubview:titleLabel];
-        [self.scrollView addSubview:subtitleLabel];
+        [self.scrollView addSubview:self.titleLabel];
+        [self.scrollView addSubview:self.subtitleLabel];
         if (buttonTitle.length > 0) {
-            [self.scrollView addSubview:self.headerButton];
+            [self.scrollView addSubview:headerButton];
         }
     }
     
@@ -214,7 +215,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
     
     
 }
-        
+
 
 
 - (void)prepareForBlurImages
@@ -244,9 +245,11 @@ CGFloat const distance_W_LabelHeader = 35.0;
 }
 
 
+
 - (void) recievedMBTwitterScrollButtonClicked {
     [self.delegate recievedMBTwitterScrollButtonClicked];
 }
+
 
 
 - (void) recievedMBTwitterScrollEvent {
@@ -254,7 +257,17 @@ CGFloat const distance_W_LabelHeader = 35.0;
 }
 
 
+// Function to blur the header image (used if the header image is replaced with updateHeaderImage)
+-(void)resetBlurImages {
+    [self.blurImages removeAllObjects];
+    [self prepareForBlurImages];
+}
 
 
+// Function to update the header image and blur it out appropriately
+-(void)updateHeaderImage:(UIImage*)newImage {
+    self.headerImageView.image = newImage;
+    [self resetBlurImages];
+}
 
 @end
