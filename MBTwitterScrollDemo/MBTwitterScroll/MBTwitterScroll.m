@@ -270,4 +270,11 @@ CGFloat const distance_W_LabelHeader = 35.0;
     [self resetBlurImages];
 }
 
+
+
+-(void) dealloc {
+    [self.tableView removeObserver:self forKeyPath:@"contentOffset"];
+}
+
+
 @end
